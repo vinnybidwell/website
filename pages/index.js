@@ -1,7 +1,21 @@
 import Head from 'next/head'
+import {
+  Checkbox,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  Menu,
+  Segment,
+  Sidebar,
+} from 'semantic-ui-react'
 
 
-export default function Home() {
+
+
+const Home = () => {
+  const [visible, setVisible] = React.useState(false)
+
   return (
     <div className="container">
       <Head>
@@ -9,12 +23,45 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+    
+          <Sidebar
+            as={Menu}
+            animation='overlay'
+            icon='labeled'
+            inverted
+            onHide={() => setVisible(false)}
+            vertical
+            visible={visible}
+            width='thin'
+          >
+            <Menu.Item as='a'>
+              <Icon name='home' />
+              Home
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Icon name='gamepad' />
+              Games
+            </Menu.Item>
+            <Menu.Item as='a'>
+              <Icon name='camera' />
+              Channels
+            </Menu.Item>
+          </Sidebar>
+
+         
+            
+ 
 
 
       <main>
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+       <Checkbox
+          checked={visible}
+          label={{ children: <code>visible</code> }}
+          onChange={(e, data) => setVisible(data.checked)}
+        />
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
@@ -210,3 +257,4 @@ export default function Home() {
     </div>
   )
 }
+export default Home

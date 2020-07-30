@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import Head from 'next/head'
 import {
   Checkbox,
@@ -8,32 +9,66 @@ import {
   Menu,
   Segment,
   Sidebar,
+  Button,
+  Dropdown
 } from 'semantic-ui-react'
 
-
-
-
-const Home = () => {
-  const [visible, setVisible] = React.useState(false)
-
+export default class Home extends Component {
+  
+  state = { visible: false, setVisible: false };
+  handleItemClick = () => this.setState({ visible: !this.state.visible })
+ render(){
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>East Bidwell</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+          
+     <Menu inverted attached='top'>
+        <Menu.Item 
+        onClick={this.handleItemClick} 
+        >
+         MENU >
+        </Menu.Item>
 
+        <Menu.Menu position='right'>
+          <Menu.Item
+            name='signup'
+          >
+            Sign Up
+          </Menu.Item>
+
+          <Menu.Item
+            name='help'
+          >
+            Help
+          </Menu.Item>
+        </Menu.Menu>
+      </Menu>
+          
+    
+    
+
+
+    
+    
     
           <Sidebar
             as={Menu}
             animation='overlay'
             icon='labeled'
             inverted
-            onHide={() => setVisible(false)}
+            
             vertical
-            visible={visible}
+            visible={this.state.visible}
             width='thin'
           >
+                 <Menu.Item 
+                    onClick={this.handleItemClick} 
+                    >
+                      Close
+                    </Menu.Item>
             <Menu.Item as='a'>
               <Icon name='home' />
               Home
@@ -58,9 +93,9 @@ const Home = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
        <Checkbox
-          checked={visible}
+          checked={this.state.visible}
           label={{ children: <code>visible</code> }}
-          onChange={(e, data) => setVisible(data.checked)}
+          onChange={this.handleItemClick}
         />
 
         <p className="description">
@@ -112,12 +147,13 @@ const Home = () => {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 0 ;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
+
 
         main {
           padding: 5rem 0;
@@ -257,4 +293,4 @@ const Home = () => {
     </div>
   )
 }
-export default Home
+}

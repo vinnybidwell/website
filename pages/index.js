@@ -27,23 +27,17 @@ export default class Home extends Component {
             <Head>
               <title>East Bidwell</title>
               <link rel="icon" href="/favicon.ico" />
+              <link rel="stylesheet" href="https://use.typekit.net/lxn5ani.css"/>
             </Head>
-
-           <Menu inverted attached='top' size='small'>
-              <Menu.Item 
-              onClick={this.handleItemClick} 
-              >
-               MENU >
-              </Menu.Item>
-
-              <Menu.Menu position='right'>
-                <Menu.Item
-                >
-                  EAST BIDWELL
-                </Menu.Item>
-              </Menu.Menu>
-            </Menu>
-
+        
+        <div className="menuopener">
+            <div> <h1 className="menuitems" onClick={this.handleItemClick}>Menu</h1> </div>
+            <div className="menuright"> 
+               <div > <h1 className="menuitems"> Hello </h1> </div>
+               <div > <h1 className="menuitems"> Goodbye </h1> </div>
+               <div>  <h1 className="menuitems"> Yahoo </h1> </div>
+            </div>
+        </div>
         
             <Sidebar
               as={Menu}
@@ -74,59 +68,14 @@ export default class Home extends Component {
                 </Menu.Item>
               </div>
             </Sidebar>
-
- <div className="contentone">
- </div>
- <div className="contenttwo">
- </div>
- <div className="contentthree">
- </div>
         
-         
+<img src="/EBWEBLOGO7.svg" alt="my image" />
+<img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2867&q=80" alt="my image" />
+<img src="https://images.unsplash.com/photo-1502847427791-d0194ec4cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1790&q=80" alt="my image" />
+   
   
             <main>
-              <h1 className="title">
-                Welcome to <a href="https://nextjs.org">Next.js!</a>
-              </h1>
-             <Checkbox
-                checked={this.state.visible}
-                label={{ children: <code>visible</code> }}
-                onChange={this.handleItemClick}
-              />
-
-              <p className="description">
-                Get started by editing <code>pages/index.js</code>
-              </p>
-
-              <div className="grid">
-                <a href="https://nextjs.org/docs" className="card">
-                  <h3>Documentation &rarr;</h3>
-                  <p>Find in-depth information about Next.js features and API.</p>
-                </a>
-
-                <a href="https://nextjs.org/learn" className="card">
-                  <h3>Learn &rarr;</h3>
-                  <p>Learn about Next.js in an interactive course with quizzes!</p>
-                </a>
-
-                <a
-                  href="https://github.com/vercel/next.js/tree/master/examples"
-                  className="card"
-                >
-                  <h3>Examples &rarr;</h3>
-                  <p>Discover and deploy boilerplate example Next.js projects.</p>
-                </a>
-
-                <a
-                  href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                  className="card"
-                >
-                  <h3>Deploy &rarr;</h3>
-                  <p>
-                    Instantly deploy your Next.js site to a public URL with Vercel.
-                  </p>
-                </a>
-              </div>
+             <h1> Hello </h1>
             </main>
 
             <footer>
@@ -135,7 +84,7 @@ export default class Home extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Powered by East Bidwell LLC
+                <h1 classname="footercontent">POWERED BY EAST BIDWELL LLC</h1>
               </a>
             </footer>
 
@@ -144,21 +93,55 @@ export default class Home extends Component {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 ;
+          padding: 0 0 0 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-color: rgba(0,0,0,0.8);
+
         }
 
+ .menuopener {
+          color: #fff;
+          height: 30px;  
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 90%;
+        }
+
+ .menuright {
+          color: #fff;
+          height: 30px;  
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 40%;
+        }
+
+.menuitems {
+          color: #f5f5f7;
+          font-size: 14px;
+          font-family: ltc-bodoni-175, serif;
+          font-weight: 400;
+          font-style: normal;
+          opacity: 0.8;
+          
+        }
 
         main {
-          padding: 5rem 0;
-          flex: 1;
+          padding: 0 0;
+  
+          
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-image: url("https://cdn.pixabay.com/photo/2020/08/13/14/15/mountains-5485366_1280.jpg");
+          width: 100%;
         }
 
         footer {
@@ -168,6 +151,7 @@ export default class Home extends Component {
           display: flex;
           justify-content: center;
           align-items: center;
+ background-color: #fff;
         }
     
        
@@ -211,9 +195,9 @@ export default class Home extends Component {
           text-decoration: none;
         }
 
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
+        h1:hover,
+        h1:focus,
+        h1:active {
           text-decoration: underline;
         }
 

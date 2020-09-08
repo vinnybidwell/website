@@ -31,12 +31,18 @@ export default class Home extends Component {
             </Head>
         
         <div className="menuopener">
-            <div> <h1 className="menuitems" onClick={this.handleItemClick}>Menu</h1> </div>
-            <div className="menuright"> 
-               <div > <h1 className="menuitems"> Hello </h1> </div>
-               <div > <h1 className="menuitems"> Goodbye </h1> </div>
-               <div>  <h1 className="menuitems"> Yahoo </h1> </div>
-            </div>
+            <div> <h1 className="menuitems" onClick={this.handleItemClick}>CONTACT INFO</h1> </div> 
+            <div > <h1 className="menuitems">  </h1> </div>
+            <div > <h1 className="menuitems">  </h1> </div>
+            <div> 
+        <a
+                href="https://www.eastbidwell.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                 <h1 className="menuitems"> MERCH SHOP </h1> 
+        </a>
+          </div>
         </div>
         
             <Sidebar
@@ -70,13 +76,7 @@ export default class Home extends Component {
             </Sidebar>
         
 <img src="/EBWEBLOGO7.svg" alt="my image" />
-<img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2867&q=80" alt="my image" />
-<img src="https://images.unsplash.com/photo-1502847427791-d0194ec4cff4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1790&q=80" alt="my image" />
-   
-  
-            <main>
-             <h1> Hello </h1>
-            </main>
+            
 
             <footer>
               <a
@@ -84,7 +84,7 @@ export default class Home extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h1 classname="footercontent">POWERED BY EAST BIDWELL LLC</h1>
+                <h1 className="menuitems">POWERED BY EAST BIDWELL LLC</h1>
               </a>
             </footer>
 
@@ -98,29 +98,20 @@ export default class Home extends Component {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-color: rgba(0,0,0,0.8);
+          background-color: rgba(0,0,0,1);
 
         }
 
  .menuopener {
           color: #fff;
-          height: 30px;  
+          height: 48px;  
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          width: 90%;
+          width: 50%;
         }
 
- .menuright {
-          color: #fff;
-          height: 30px;  
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          width: 40%;
-        }
 
 .menuitems {
           color: #f5f5f7;
@@ -129,20 +120,9 @@ export default class Home extends Component {
           font-weight: 400;
           font-style: normal;
           opacity: 0.8;
-          
+          letter-spacing: .1em
         }
 
-        main {
-          padding: 0 0;
-  
-          
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-image: url("https://cdn.pixabay.com/photo/2020/08/13/14/15/mountains-5485366_1280.jpg");
-          width: 100%;
-        }
 
         footer {
           width: 100%;
@@ -151,7 +131,7 @@ export default class Home extends Component {
           display: flex;
           justify-content: center;
           align-items: center;
- background-color: #fff;
+ background-color: #000;
         }
     
        
@@ -162,21 +142,7 @@ export default class Home extends Component {
         }
         
 
-        .contentone {
-          background-color: #fff;
-          width: 100%;
-          height: 100vh;
-        }
-        .contenttwo {
-          background-color: #eaeaea;
-          width: 100%;
-          height: 100vh;
-        }
-        .contentthree {
-          background-color: #fff;
-          width: 100%;
-          height: 100vh;
-        }
+       
 
 
         footer a {
@@ -199,6 +165,10 @@ export default class Home extends Component {
         h1:focus,
         h1:active {
           text-decoration: underline;
+          color: #f5f5f7;
+          opacity: 1;
+          
+          
         }
 
         .title {

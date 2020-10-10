@@ -75,7 +75,10 @@ export default class Home extends Component {
               </div>
             </Sidebar>
         
-<img src="/EBWEBLOGO7.svg" alt="my image" />
+     
+<img className="tester" src="/bigboi.svg" alt="my image" />
+
+
             
 
             <footer>
@@ -122,7 +125,19 @@ export default class Home extends Component {
           opacity: 0.8;
           letter-spacing: .1em
         }
-
+.jumbo {
+          color: #fff;
+          background-image: url("https://images.unsplash.com/photo-1542319920155-a236a55f1a97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+          height: 80vh;  
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+}
+.tester {
+          width: 100%;
+}
 
         footer {
           width: 100%;
